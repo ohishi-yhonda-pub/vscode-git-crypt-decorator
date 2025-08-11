@@ -1,0 +1,48 @@
+{
+  "name": "git-crypt-decorator",
+  "displayName": "Git Crypt Decorator",
+  "description": "VSCode拡張機能：git-cryptで暗号化されたファイルをエクスプローラーで視覚的に識別",
+  "version": "0.0.1",
+  "publisher": "yhonda-mtama",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Git Crypt Decorator",
+      "properties": {
+        "gitCryptDecorator.badge": {
+          "type": "string",
+          "default": "🔒",
+          "description": "暗号化されたファイルに表示するバッジ"
+        },
+        "gitCryptDecorator.tooltip": {
+          "type": "string",
+          "default": "Git-Crypt暗号化ファイル",
+          "description": "暗号化されたファイルのツールチップ"
+        },
+        "gitCryptDecorator.color": {
+          "type": "string",
+          "default": "editorInfo.foreground",
+          "description": "暗号化されたファイルの色（VSCodeのテーマカラーを使用）"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^5.0.0"
+  }
+}
