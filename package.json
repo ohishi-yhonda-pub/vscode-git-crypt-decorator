@@ -2,7 +2,7 @@
   "name": "git-crypt-decorator",
   "displayName": "Git Crypt Decorator",
   "description": "VSCode拡張機能：git-cryptで暗号化されたファイルをエクスプローラーで視覚的に識別",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "yhonda-mtama",
   "license": "MIT",
   "repository": {
